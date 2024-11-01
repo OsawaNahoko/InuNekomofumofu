@@ -6,7 +6,6 @@ public class Movement : MonoBehaviour
 {
     [HideInInspector]
     public BoxCollider2D  Boxcoll;
-    public  bool Flag;
 
     float[] positionYArray = {1.0f,-3.0f};
     float[] positionXArray = {-6.0f,0.4f,6.0f};
@@ -23,22 +22,6 @@ public class Movement : MonoBehaviour
         transform.position = new Vector3(x,y,0);
     }
 
-    // public bool MoveFlag()
-    // {
-    //     bool result = false;
 
-    //     if(result == false)
-    //     {
-    //         return false;
-    //         Debug.Log($"MoveFlag = {result}");
-    //     }
-    //     else if(result == true)
-    //     {
-    //         result = false;
-    //         Debug.Log($"MoveFlag = {result}");
-    //     }
-    //     Debug.Log($"MoveFlag = {result}");
-    //     return result;
-    // }
 
 }

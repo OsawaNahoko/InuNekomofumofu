@@ -7,6 +7,6 @@ public class Chara_dog : Chara_base
 
     void Update()
     {
-        BaseMove(5.0f);
+        BaseMove(5.0f);//引数は待機時間
     }
 }
