@@ -9,8 +9,11 @@ public class ClickEvent : Movement
     public void DelayClick()
     {
         if(Boxcoll == null)Boxcoll = this.gameObject.GetComponent<BoxCollider2D>();
+
         Count += 1;
         Boxcoll.enabled = false;
+        
+        ClickFlag();
         Invoke("OnMove",1.0f);
     }
 

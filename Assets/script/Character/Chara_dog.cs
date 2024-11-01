@@ -5,8 +5,8 @@ using UnityEngine;
 public class Chara_dog : Chara_base
 {
 
-    void Updeta()
+    void Update()
     {
-        Base(2.0f);
+        BaseMove(2.0f);
     }
 }

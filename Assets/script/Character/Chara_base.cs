@@ -6,17 +6,18 @@ public class Chara_base : Movement
 {
     float Loop;
 
-    public void Base(float WaitTime)
+    public void BaseMove(float WaitTime)
     {
         Loop += Time.deltaTime;
-        if(ClickFlag == true)Loop = 0f;ClickFlag = false;
+        Debug.Log($"Loop{Loop}");
+        
+        if(ClickFlag() == true)Loop = 0f;Debug.Log("ClickFlagがONになりました。");
 
         if(Loop > WaitTime)
         {
             if(Boxcoll == null)Boxcoll = this.gameObject.GetComponent<BoxCollider2D>();
-
             Boxcoll.enabled = false;
-            Loop = 0f;
+
             Invoke("OnMove",1.0f);
         }
     }
