@@ -13,7 +13,6 @@ public class ClickEvent : Movement
         Count += 1;
         Boxcoll.enabled = false;
         
-        ClickFlag();
         Invoke("OnMove",1.0f);
     }
 

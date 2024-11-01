@@ -9,13 +9,21 @@ public class Chara_base : Movement
     public void BaseMove(float WaitTime)
     {
         Loop += Time.deltaTime;
-        Debug.Log($"Loop{Loop}");
+        // bool Flag = MoveFlag(); 
         
-        if(ClickFlag() == true)Loop = 0f;Debug.Log("ClickFlagがONになりました。");
+        // if(Flag == true)
+        // {
+        //     Loop = 0.0f;
+
+        //     Debug.Log($"Loop = {Loop}");
+        // }
 
         if(Loop > WaitTime)
         {
             if(Boxcoll == null)Boxcoll = this.gameObject.GetComponent<BoxCollider2D>();
+            Loop = 0.0f;
+            Debug.Log($"Loop{Loop}");
+
             Boxcoll.enabled = false;
 
             Invoke("OnMove",1.0f);

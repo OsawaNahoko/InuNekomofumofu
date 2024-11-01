@@ -7,6 +7,6 @@ public class Chara_dog : Chara_base
 
     void Update()
     {
-        BaseMove(2.0f);
+        BaseMove(5.0f);
     }
 }
