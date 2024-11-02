@@ -1,11 +1,11 @@
 
 public class Chara_dog : Chara_base
+//Chara_baseとStart時にSettingConponentを呼び出すことを忘れずに！
 {
     void Start()
     {
         SettingConponet();
     }
-
 
     void FixedUpdate()
     {

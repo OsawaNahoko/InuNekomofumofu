@@ -7,6 +7,7 @@ public class TimeManeger : MonoBehaviour
 {
     public float now   = 10f;
     string TimeCount;
+    public GameObject ClearWindow;
 
     public Text TimerText;
 
@@ -25,17 +26,11 @@ public class TimeManeger : MonoBehaviour
         if (now < 0f)
         {
             now = 0f;
+            ClearWindow.SetActive(true);
         }
             TimeCount = now.ToString("F2");
             TimerText.text = TimeCount;
         }
-        else
-        {
-            now = 0f;
-            Debug.Log("０になったよ");
-            TimerText.text = now.ToString("F2");
-        }
-   
     
     }
 }

@@ -1,26 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ClickEvent : Movement
+public class Chara_base : ClickEvent
 {
-    [HideInInspector] public float Loop;
+    public Text LoopText;
+    string looptex;
+
     float AnimTime = -1.0f;
 
-    int Count = 0;
- 
-    bool ResetSetting = false;
-
-    public void DelayClick()
+    public void Test()
     {
-        if(Boxcoll == null)
+            looptex = Loop.ToString("F2");
+            LoopText.text = looptex;
 
-        Count += 1;//もふもふカウント＋１
-
-        Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
-        ResetSetting    = true; //Loop変数リセットFlagをtrueに
-
-        Invoke("OnMove",1.0f);  //キャラクターを移動
     }
 
     public void BaseMove(float WaitTime)
@@ -48,3 +42,4 @@ public class ClickEvent : Movement
     }
 
 }
+
