@@ -1,6 +1,10 @@
 
 public class Chara_dog : Chara_base
 {
+    void Start()
+    {
+        SettingConponet();
+    }
 
 
     void FixedUpdate()

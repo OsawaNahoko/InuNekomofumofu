@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class ClickEvent : Movement
 {
+    [HideInInspector] public float Loop;
+    float AnimTime = -1.0f;
+
     int Count = 0;
-    public float Loop;
+ 
     bool ResetSetting = false;
 
     public void DelayClick()
     {
-        if(Boxcoll == null)Boxcoll = this.gameObject.GetComponent<BoxCollider2D>();
+        if(Boxcoll == null)
 
-        Count += 1;
-        Boxcoll.enabled = false;
-        ResetSetting = true;
-        Debug.Log($"DwlayClick動いてます");
-        OnMove();
-        // Invoke("OnMove",1.0f);
+        Count += 1;//もふもふカウント＋１
+
+        Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
+        ResetSetting    = true; //Loop変数リセットFlagをtrueに
+
+        Invoke("OnMove",1.0f);  //キャラクターを移動
     }
 
     public void BaseMove(float WaitTime)
@@ -26,25 +29,21 @@ public class ClickEvent : Movement
 
         if(ResetSetting == true)
         {
-            Loop = 0.0f;
-            Debug.Log($"ResetSetting = {ResetSetting}");
-            ResetSetting = false;
+            Loop = AnimTime;     //AnimTimeをLoopに代入
+            ResetSetting = false;//Loop変数リセットFlagをfalseに
 
         }else if(ResetSetting == false)
         {
-            
+            //何もしない
         }
-
-        Debug.Log($"Loop{Loop}");
 
         if(Loop >= WaitTime)
         {
-            if(Boxcoll == null)Boxcoll = this.gameObject.GetComponent<BoxCollider2D>();
-            Loop = 0.0f;
-
-            Boxcoll.enabled = false;
-            OnMove();
-            // Invoke("OnMove",1.0f);
+           
+            Loop = AnimTime;        //AnimTimeをLoopに代入
+            Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
+            m_Animator.SetTrigger("MoveTrigger");
+            Invoke("OnMove",1.0f);  //キャラクターを移動
         }
     }
 

@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Movement : ConpnentSetting
 {
-    [HideInInspector]
-    public BoxCollider2D  Boxcoll;
 
     float[] positionYArray = {1.0f,-3.0f};
     float[] positionXArray = {-6.0f,0.4f,6.0f};
@@ -21,7 +19,5 @@ public class Movement : MonoBehaviour
 
         transform.position = new Vector3(x,y,0);
     }
-
-
 
 }

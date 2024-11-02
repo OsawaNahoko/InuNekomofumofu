@@ -20,7 +20,8 @@ public class TimeManeger : MonoBehaviour
         if(now >= 0f)
         {
             now -= Time.deltaTime;
-                // もし now が 0 未満に下がっていたら、0 に固定する
+            
+        // もし now が 0 未満に下がっていたら、0 に固定する
         if (now < 0f)
         {
             now = 0f;
