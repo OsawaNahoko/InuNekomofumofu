@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class Chara_base : ClickEvent
 {
     public Text LoopText;
-    string looptex;
+    string loopString;
 
     float AnimTime = -1.0f;
 
     public void Test()
     {
-            looptex = Loop.ToString("F2");
-            LoopText.text = looptex;
+            loopString    = Loop.ToString("F2");
+            LoopText.text = loopString;
 
     }
 
