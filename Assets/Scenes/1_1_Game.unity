@@ -606,7 +606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &258699402
 Transform:
   m_ObjectHideFlags: 0
@@ -1057,7 +1057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &858783094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1000, y: 735}
+  m_AnchoredPosition: {x: 388, y: 990}
   m_SizeDelta: {x: 868.4583, y: 180.0265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858783095
@@ -1613,7 +1613,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.7504654, y: 7.83}
+    oldSize: {x: 5.940582, y: 6.64}
     newSize: {x: 2.53, y: 3.01}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

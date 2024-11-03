@@ -12,15 +12,14 @@ public class Movement : ConpnentSetting
 
     public void OnMove()
     {
+        m_Animator.SetBool("JanpDownFlag",false);
+        m_Animator.SetBool("MofumofuFlag",false);
+
         float x = positionXArray[Random.Range(0,positionXArray.Length)];
         float y = positionYArray[Random.Range(0,positionYArray.Length)];
 
         Boxcoll.enabled = true;
-
         transform.position = new Vector3(x,y,0);
-
-        m_Animator.SetBool("JanpDownFlag",false);
-        m_Animator.SetBool("MofumofuFlag",false);
 
         if(y == -1.6f)
         {
@@ -30,6 +29,10 @@ public class Movement : ConpnentSetting
         {
             m_Splaitrend.sortingOrder = 4;
         }
+        
+        m_Animator.SetBool("JanpUPFlag",true);
+
+        Debug.Log("OnMove");
     }
 
 }

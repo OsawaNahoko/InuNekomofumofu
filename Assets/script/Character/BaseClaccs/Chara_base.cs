@@ -40,6 +40,11 @@ public class Chara_base : ClickEvent
         }
     }
 
+    public void SettingFlag()
+    {
+        m_Animator.SetBool("JanpUPFlag",true);
+    }
+
     // void OnCollisionEnter2D(Collision2D collision)
     // {
     //     Reset();
@@ -50,6 +55,7 @@ public class Chara_base : ClickEvent
     void Reset()
     {
         Loop = AnimTime;     //AnimTimeをLoopに代入
+        m_Animator.SetBool("JanpUPFlag",false);
     }
 
 }

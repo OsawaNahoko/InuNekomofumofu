@@ -11,5 +11,6 @@ public class Chara_dog : Chara_base
     {
         Test();
         BaseMove(5.0f);//引数は待機時間
+        SettingFlag();
     }
 }
