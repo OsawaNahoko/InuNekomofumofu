@@ -24,6 +24,7 @@ public class ClickEvent : Movement
         Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
         ResetSetting    = true; //Loop変数リセットFlagをtrueに
 
+        m_Animator.SetBool("MofumofuFlag",true);
         Invoke("OnMove",1.0f);  //キャラクターを移動
     }
 
