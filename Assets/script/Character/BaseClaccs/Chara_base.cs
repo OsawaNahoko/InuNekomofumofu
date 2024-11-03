@@ -8,7 +8,7 @@ public class Chara_base : ClickEvent
     public Text LoopText;
     string loopString;
 
-    float AnimTime = -1.0f;
+    float AnimTime = -1.4f;
 
     public void Test()
     {
@@ -36,7 +36,7 @@ public class Chara_base : ClickEvent
             Reset();
             Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
             m_Animator.SetBool("JanpDownFlag",true);
-            Invoke("OnMove",1);  //キャラクターを移動
+            Invoke("OnMove",1.4f);  //キャラクターを移動
         }
     }
 
