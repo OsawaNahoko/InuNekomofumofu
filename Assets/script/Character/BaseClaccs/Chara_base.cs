@@ -23,7 +23,7 @@ public class Chara_base : ClickEvent
 
         if(ResetSetting == true)
         {
-            Loop = AnimTime;     //AnimTimeをLoopに代入
+            Reset();
             ResetSetting = false;//Loop変数リセットFlagをfalseに
 
         }else if(ResetSetting == false)
@@ -33,12 +33,22 @@ public class Chara_base : ClickEvent
 
         if(Loop >= WaitTime)
         {
-           
-            Loop = AnimTime;        //AnimTimeをLoopに代入
+            Reset();
             Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
             m_Animator.SetTrigger("MoveTrigger");
             Invoke("OnMove",1.0f);  //キャラクターを移動
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Reset();
+        OnMove();
+    }
+
+    void Reset()
+    {
+        Loop = AnimTime;     //AnimTimeをLoopに代入
     }
 
 }
