@@ -23,9 +23,8 @@ public class TimeManeger : MonoBehaviour
         {
             now    -= Time.deltaTime;
             second  = (int)now;
-            
-        // もし now が 0 未満に下がっていたら、0 に固定する
-        if (now < 0f)
+
+        if (now < 0f)// もし now が 0 未満に下がっていたら
         {
             now = 0f;
             ClearWindow.SetActive(true);

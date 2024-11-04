@@ -9,7 +9,6 @@ public class Chara_cat : Chara_base
 
     void FixedUpdate()
     {
-        Test();
         BaseMove(2.0f);//引数は待機時間
     }
 }

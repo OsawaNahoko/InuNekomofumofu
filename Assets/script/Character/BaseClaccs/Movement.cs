@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : ConpnentSetting
+public class Movement : AnimetionSetting
 {
 
     float[] positionYArray = {2.25f,-1.6f};
@@ -28,10 +28,10 @@ public class Movement : ConpnentSetting
             m_Splaitrend.sortingOrder = 4;
         }
 
-        m_Animator.SetBool("JanpDownFlag",false);
-        m_Animator.SetBool("MofumofuFlag",false);
+        unSet_DownAnime();
+        unSet_mofumofuFlag();
 
-        m_Animator.SetBool("JanpUPFlag",true);
+        Set_JanpUPFlag();
 
     }
 

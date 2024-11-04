@@ -8,6 +8,9 @@ public class ClickEvent : Movement
     public Text CountText;
     string Countstring;
 
+    public Text LoopText;
+    string loopString;
+
     [HideInInspector] public float Loop;
     [HideInInspector] public bool ResetSetting = false;
 
@@ -15,30 +18,29 @@ public class ClickEvent : Movement
 
     public void DelayClick()
     {
-        
         Count += 1;//もふもふカウント＋１
-        Debug.Log($"Count = {Count}");
 
         CountLog();//クリア時の文字を更新
 
         Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
         ResetSetting    = true; //Loop変数リセットFlagをtrueに
 
-        m_Animator.SetBool("MofumofuFlag",true);
-        Invoke("DownAnime",0.5f);  //キャラクターを移動
-        Invoke("OnMove",1.5f);  //キャラクターを移動
+        Set_mofumofuFlag();
+        Invoke("Set_DownAnime",0.5f);//移動アニメーションを再生
+        Invoke("OnMove",2.0f);  //キャラクターを移動
     }
 
-        public void CountLog()
+    public void CountLog()
     {
             Countstring = Count.ToString();
             CountText.text = Countstring;
     }
-
-        void DownAnime()
+    
+        void LoopLog()
     {
-        m_Animator.SetBool("JanpDownFlag",true);
+            loopString    = Loop.ToString("F2");
+            LoopText.text = loopString;
+
     }
-
-
+    
 }
