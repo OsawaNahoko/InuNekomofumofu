@@ -8,7 +8,7 @@ public class Chara_base : ClickEvent
     public Text LoopText;
     string loopString;
 
-    float AnimTime = -1.4f;
+    float AnimTime = -2.0f;
 
     public void Test()
     {
@@ -25,6 +25,7 @@ public class Chara_base : ClickEvent
         {
             Reset();
             ResetSetting = false;//Loop変数リセットFlagをfalseに
+            
 
         }else if(ResetSetting == false)
         {
@@ -36,7 +37,7 @@ public class Chara_base : ClickEvent
             Reset();
             Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
             m_Animator.SetBool("JanpDownFlag",true);
-            Invoke("OnMove",1.4f);  //キャラクターを移動
+            Invoke("OnMove",1.5f);
         }
     }
 
@@ -54,9 +55,10 @@ public class Chara_base : ClickEvent
 
     void Reset()
     {
-        Loop = AnimTime;     //AnimTimeをLoopに代入
+        Loop = AnimTime;//AnimTimeをLoopに代入
         m_Animator.SetBool("JanpUPFlag",false);
     }
+
 
 }
 

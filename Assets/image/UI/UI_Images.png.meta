@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a69cbfbc070f28488f6610ea91c52ff
+guid: cbdf43d2ee78f3745920de0ffcd85c36
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_Images_0
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1112
+        width: 638
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f67459616cc2642aaac19dc1af99a3
+      internalID: 661537357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Images_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 9
+        width: 1731
+        height: 1005
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d67d002e57e044882ebc24480bc4be
+      internalID: -1056637281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Images_4
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 649
+        width: 239
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e292c6e1c79f7da4c8b44caecf049e61
+      internalID: -1907482070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Images_5
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 356
+        width: 230
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad6bbe26311dbd44a1faa7afca29883
+      internalID: -549672425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Images_0: 661537357
+      UI_Images_1: -1056637281
+      UI_Images_2: 34438949
+      UI_Images_3: -2059988414
+      UI_Images_4: -1907482070
+      UI_Images_5: -549672425
+      UI_Images_6: -1702638848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

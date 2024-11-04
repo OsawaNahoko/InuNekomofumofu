@@ -25,14 +25,19 @@ public class ClickEvent : Movement
         ResetSetting    = true; //Loop変数リセットFlagをtrueに
 
         m_Animator.SetBool("MofumofuFlag",true);
-        Invoke("OnMove",1.4f);  //キャラクターを移動
+        Invoke("DownAnime",0.5f);  //キャラクターを移動
+        Invoke("OnMove",1.5f);  //キャラクターを移動
     }
 
         public void CountLog()
     {
             Countstring = Count.ToString();
             CountText.text = Countstring;
+    }
 
+        void DownAnime()
+    {
+        m_Animator.SetBool("JanpDownFlag",true);
     }
 
 

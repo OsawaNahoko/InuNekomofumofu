@@ -19,9 +19,6 @@ public class Movement : ConpnentSetting
         Boxcoll.enabled = true;
         transform.position = new Vector3(x,y,0);
 
-              
-        m_Animator.SetBool("JanpDownFlag",false);
-        
         if(y == -1.6f)
         {
             m_Splaitrend.sortingOrder = 5;
@@ -30,10 +27,18 @@ public class Movement : ConpnentSetting
         {
             m_Splaitrend.sortingOrder = 4;
         }
-        m_Animator.SetBool("MofumofuFlag",false);
-        m_Animator.SetBool("JanpUPFlag",true);
 
-        Debug.Log("OnMove");
+        m_Animator.SetBool("JanpDownFlag",false);
+        m_Animator.SetBool("MofumofuFlag",false);
+
+        m_Animator.SetBool("JanpUPFlag",true);
+        // Invoke("DelayAnime",0.5f);
+
+    }
+
+    void DelayAnime()
+    {
+        m_Animator.SetBool("JanpUPFlag",true);
     }
 
 }
