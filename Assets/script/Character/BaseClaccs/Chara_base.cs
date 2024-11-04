@@ -25,7 +25,6 @@ public class Chara_base : ClickEvent
         {
             Reset();
             ResetSetting = false;//Loop変数リセットFlagをfalseに
-            
 
         }else if(ResetSetting == false)
         {
@@ -37,7 +36,7 @@ public class Chara_base : ClickEvent
             Reset();
             Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
             m_Animator.SetBool("JanpDownFlag",true);
-            Invoke("OnMove",1.5f);
+            Invoke("OnMove",1.3f);
         }
     }
 
@@ -58,7 +57,6 @@ public class Chara_base : ClickEvent
         Loop = AnimTime;//AnimTimeをLoopに代入
         m_Animator.SetBool("JanpUPFlag",false);
     }
-
 
 }
 

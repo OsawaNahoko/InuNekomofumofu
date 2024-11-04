@@ -32,13 +32,7 @@ public class Movement : ConpnentSetting
         m_Animator.SetBool("MofumofuFlag",false);
 
         m_Animator.SetBool("JanpUPFlag",true);
-        // Invoke("DelayAnime",0.5f);
 
-    }
-
-    void DelayAnime()
-    {
-        m_Animator.SetBool("JanpUPFlag",true);
     }
 
 }
