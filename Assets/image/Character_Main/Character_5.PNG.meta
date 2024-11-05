@@ -126,8 +126,8 @@ TextureImporter:
       name: Character_5_1
       rect:
         serializedVersion: 2
-        x: 155
-        y: 29
+        x: 169
+        y: 31
         width: 525
         height: 783
       alignment: 0
@@ -147,8 +147,8 @@ TextureImporter:
       name: Character_5_2
       rect:
         serializedVersion: 2
-        x: 725
-        y: 37
+        x: 714
+        y: 34
         width: 594
         height: 664
       alignment: 0
