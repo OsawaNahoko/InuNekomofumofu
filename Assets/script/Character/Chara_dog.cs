@@ -16,6 +16,9 @@ public class Chara_dog : Chara_base
         while(true)
         {
             BaseMove(5.0f);//引数は待機時間
+            
+            yield return null;
+            continue;
         }
     }
 }

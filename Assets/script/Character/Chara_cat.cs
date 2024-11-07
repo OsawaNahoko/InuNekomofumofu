@@ -13,10 +13,12 @@ public class Chara_cat : Chara_base
     IEnumerator StartMove(float WaitIETime)
     {
         yield return new WaitForSeconds(WaitIETime);
-        
         while(true)
         {
             BaseMove(5.0f);//引数は待機時間
+
+            yield return null;
+            continue;
         }
     }
 }
