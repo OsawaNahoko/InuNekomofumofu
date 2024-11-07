@@ -7,12 +7,15 @@ public class Chara_dog : Chara_base
     void Start()
     {
         SettingConponet();
-        StartCoroutine(StartMove(3.0f));
+        StartCoroutine(StartMove(1.0f));
     }
 
     IEnumerator StartMove(float WaitIETime)
     {
         yield return new WaitForSeconds(WaitIETime);
+        Set_JanpUPFlag();
+        Debug.Log("処理の見える化・犬");
+        
         while(true)
         {
             BaseMove(5.0f);//引数は待機時間

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 68204278}
   - component: {fileID: 68204280}
   - component: {fileID: 68204279}
+  - component: {fileID: 68204281}
   m_Layer: 5
   m_Name: TimeCount
   m_TagString: Untagged
@@ -202,6 +203,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68204277}
   m_CullTransparentMesh: 1
+--- !u!95 &68204281
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68204277}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f894311332cb634b9d7a5a43ea3d148, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &94233369
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +646,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538561640}
         m_TargetAssemblyTypeName: SceneScript, Assembly-CSharp
-        m_MethodName: LoadGameScene
+        m_MethodName: Load_TitleScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -922,37 +944,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!1 &645265242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 645265243}
-  m_Layer: 0
-  m_Name: MovePositon_Dog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &645265243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645265242}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0937382, y: 0.0052621476, z: -0.9386117}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663614616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,9 +2321,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1679069219}
-          m_TargetAssemblyTypeName: ClickEvent, Assembly-CSharp
-          m_MethodName: DelayClick
+        - m_Target: {fileID: 112826250}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2342,9 +2333,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 112826250}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
+        - m_Target: {fileID: 1679069219}
+          m_TargetAssemblyTypeName: ClickEvent, Assembly-CSharp
+          m_MethodName: DelayClick
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2693,7 +2684,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538561640}
         m_TargetAssemblyTypeName: SceneScript, Assembly-CSharp
-        m_MethodName: LoadGameScene
+        m_MethodName: Load_GameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3042,7 +3033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e113d36424f04345a0309e02fcb4895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  now: 30
+  now: 31
   ClearWindow: {fileID: 258699401}
   TimerText: {fileID: 68204279}
 --- !u!1 &2028182117
@@ -3352,4 +3343,3 @@ SceneRoots:
   - {fileID: 926642302}
   - {fileID: 2123326747}
   - {fileID: 1538561639}
-  - {fileID: 645265243}
