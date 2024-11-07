@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEngine;
 
 public class Chara_cat : Chara_base
 //Chara_baseとStart時にSettingConponentを呼び出すことを忘れずに！
@@ -5,10 +7,16 @@ public class Chara_cat : Chara_base
     void Start()
     {
         SettingConponet();
+        StartCoroutine(StartMove(5.0f));
     }
 
-    void FixedUpdate()
+    IEnumerator StartMove(float WaitIETime)
     {
-        BaseMove(2.0f);//引数は待機時間
+        yield return new WaitForSeconds(WaitIETime);
+        
+        while(true)
+        {
+            BaseMove(5.0f);//引数は待機時間
+        }
     }
 }

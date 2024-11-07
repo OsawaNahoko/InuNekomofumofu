@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEngine;
 
 public class Chara_dog : Chara_base
 //Chara_baseとStart時にSettingConponentを呼び出すことを忘れずに！
@@ -5,11 +7,15 @@ public class Chara_dog : Chara_base
     void Start()
     {
         SettingConponet();
-        Invoke("Set_JanpUPFlag",1.0f);
+        StartCoroutine(StartMove(3.0f));
     }
 
-    void FixedUpdate()
+    IEnumerator StartMove(float WaitIETime)
     {
-        BaseMove(5.0f);//引数は待機時間
+        yield return new WaitForSeconds(WaitIETime);
+        while(true)
+        {
+            BaseMove(5.0f);//引数は待機時間
+        }
     }
 }

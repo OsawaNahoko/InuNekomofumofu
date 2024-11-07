@@ -8,16 +8,17 @@ public class Chara_Start : Chara_base
     void Start()
     {
         SettingConponet();
-        Invoke("Set_JanpUPFlag",1.0f);
+        Invoke("Set_JanpUPFlag",0.3f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void StartClick()
     {
         
+        Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
+        ResetSetting    = true; //Loop変数リセットFlagをtrueに
+
+        Set_mofumofuFlag();
+        Invoke("Set_DownAnime",0.5f);//移動アニメーションを再生
+        Debug.Log("もふてる");
     }
 }

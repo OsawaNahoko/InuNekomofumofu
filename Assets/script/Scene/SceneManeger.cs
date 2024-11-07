@@ -5,15 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 { 
-    void Delay_LoadGameScene()
+    public void DelayLoad_GameScene()
     {
-
-        Invoke("Delay_LoadGameScene",1.0f);
+        Debug.Log("ロードすると思う");
+        Invoke("Load_GameScene",2.0f);
     }
 
-     public void LoadGameScene()
+     public void Load_GameScene()
     {
         SceneManager.LoadScene("1_1_Game");
+    }
+
+    public void Load_TitleScene()
+    {
+        SceneManager.LoadScene("0_1_Title");
     }
 
   
