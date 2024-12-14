@@ -16,7 +16,6 @@ public class Movement : AnimetionSetting
         float x = positionXArray[Random.Range(0,positionXArray.Length)];
         float y = positionYArray[Random.Range(0,positionYArray.Length)];
 
-        Boxcoll.enabled = true;
         transform.position = new Vector3(x,y,0);
 
         if(y == -1.6f)
@@ -30,8 +29,10 @@ public class Movement : AnimetionSetting
 
         unSet_DownAnime();
         unSet_mofumofuFlag();
-
+        
         Set_JanpUPFlag();
+
+        Invoke("enabledBoxcoll",1.0f);
 
     }
 

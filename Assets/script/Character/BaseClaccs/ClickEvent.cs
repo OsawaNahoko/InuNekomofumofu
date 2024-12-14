@@ -22,7 +22,7 @@ public class ClickEvent : Movement
 
         CountLog();//クリア時の文字を更新
 
-        Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
+        unenabledBoxcoll();//Boxコライダーを無効（連続クリック対策）
         ResetSetting    = true; //Loop変数リセットFlagをtrueに
 
         Set_mofumofuFlag();

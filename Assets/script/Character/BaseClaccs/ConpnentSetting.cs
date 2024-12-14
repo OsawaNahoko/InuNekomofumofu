@@ -15,4 +15,14 @@ public class ConpnentSetting : MonoBehaviour
         m_Splaitrend = this.GetComponent<SpriteRenderer>();          //SpriteRendererを取得
     }
 
+    public void unenabledBoxcoll()
+    {
+        Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
+    }
+
+    public void enabledBoxcoll()
+    {
+        Boxcoll.enabled = true;//Boxコライダーを有効
+    }
+
 }

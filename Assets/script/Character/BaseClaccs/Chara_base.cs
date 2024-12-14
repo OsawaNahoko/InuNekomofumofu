@@ -24,7 +24,7 @@ public class Chara_base : ClickEvent
         if(Loop >= WaitTime)
         {
             Reset();
-            Boxcoll.enabled = false;//Boxコライダーを無効（連続クリック対策）
+            unenabledBoxcoll();//Boxコライダーを無効（連続クリック対策）
             Set_DownAnime();
             Invoke("OnMove",2.5f);
         }
