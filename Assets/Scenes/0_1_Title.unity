@@ -957,6 +957,7 @@ MonoBehaviour:
   Boxcoll: {fileID: 0}
   m_Animator: {fileID: 0}
   m_Splaitrend: {fileID: 0}
+  Chara_ID: 0
   CountText: {fileID: 0}
   LoopText: {fileID: 0}
   Loop: -2.5
@@ -1315,7 +1316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1565023242
 Transform:
   m_ObjectHideFlags: 0
@@ -1500,7 +1501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1863507741
 RectTransform:
   m_ObjectHideFlags: 0
